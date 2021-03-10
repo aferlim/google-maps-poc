@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="pt-Br">
+    <head>
+        <meta charset="utf-8">
+        <title>Google Maps Demo</title>
+        <link rel="stylesheet" type="text/css" href="./css/index.css" />
+    </head>
+    <body>
+
+        <section class="content">
+                <nav>
+                    <h1>Meu Estabelecimento</h1>
+                </nav>
+                <form>
+                    <span class="radio">
+                        <input type="radio" name="cost" id="cost-one">
+                        <label for="cost-one">Não defina custo</label>
+                    </span>
+                    <span class="radio">
+                        <input type="radio" name="cost" id="cost-two">
+                        <label for="cost-two">Estabelecer custo para entrega fixo</label>
+                    </span>
+                    <span class="radio">
+                        <input type="radio" name="cost" id="cost-three">
+                        <label for="cost-three">Estabelecer custo para entrega por raio de distância</label>
+                    </span>
+                    <span>
+                        <label>País</label>
+                        <select id="country" name="country">
+                            <option value="br">Brasil</option>
+                        </select>
+                    </span>
+                    <span>
+                        <label>Endereço</label>
+                        <input type="text" size="60" placeholder="Digite um endereço" id="address" autocomplete="off" name="address" data-id="autocomplete">
+                    </span>
+                </form>
+
+                <ul id="select-place" class="places">
+            
+                </ul>
+
+                <div id="map"></div>
+
+                <nav>
+                    <h1>Custos de Cobertura de Entrega</h1>
+                </nav>
+
+                <div class="coverage">
+                    <div class="coverage_rows">
+                        <div class="row" data-id="coverage_line" data-value-item="0">
+                            <div class="color" data-id="coverage_color" style="background-color: #9c27b0;""></div>
+                            <div class="input-control">
+                                <span class="slot">
+                                    <fieldset aria-hidden="true">
+                                        <legend>Cobertura (Metros)</legend>
+                                        <input type="number" min="1" value="1000" name="coverage_meters" data-id="coverage_meters">
+                                    </fieldset>
+                                </span>
+                            </div>
+                            <div class="input-control">
+                                <span class="slot">
+                                    <fieldset aria-hidden="true">
+                                        <legend>Custo</legend>
+                                        <div class="prefix">R$</div>
+                                        <input type="text" class="currency" name="coverage_value" data-id="coverage_value" value="0">
+                                    </fieldset>
+                                </span>
+                            </div>
+                            <span class="function" data-id="coverage_remove" style="display: none;">
+                                <a href="#" data-id="coverage_remove_button">Remover</a>
+                            </span>
+                        </div>
+                    </div>
+                    <button id="add_coverage">Adicionar Cobertura</button>
+                </div>
+
+        </section>
+
+        <div id="infowindow-content">
+            <span id="place-name" class="title"></span><br />
+            <span id="place-address"></span>
+        </div>
+
+        <script type="text/javascript" src="https://mydish.com.br/js/jquery-2.2.4.min.js"></script>
+        <script type="text/javascript" src="js/index.js"></script>
+
+    <!-- Async script executes immediately and must be after any DOM elements used in callback. -->
+    <script
+      src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDZDvl5bDjcfmV_6PJF9_MJx9xXaSTMHqE&callback=initMap&libraries=places&v=weekly"
+      async
+    ></script>
+    </body>
+</html>

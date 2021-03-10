@@ -1,0 +1,128 @@
+body {
+    box-sizing: border-box;
+    font: 300 14px/1.2 "Source Sans Pro","Open Sans",Roboto,"San Francisco",Helvetica,Arial,sans-serif;
+    color: #333;
+    margin: 0;
+    background-color: #fff;
+}
+
+p {
+    display: block;
+    margin-block-start: 1em;
+    margin-block-end: 1em;
+    margin-inline-start: 0px;
+    margin-inline-end: 0px;
+}
+
+.content {
+    width: 60%;
+    margin: 0 auto;
+    margin-bottom: 30px;
+}
+
+input, select, button{
+    line-height: 16px;
+    padding: 5px;
+    font-size: 11pt;
+}
+
+form {
+    padding: 10px;
+    float: left;
+    width: 100%;
+}
+
+.content form span {
+    margin-bottom: 10px;
+    float: left;
+    width: 100%;
+}
+
+.content form span::after {
+    content: "\a";
+    white-space: pre;
+}
+
+.content form span label{
+    float: left; width: 100%;
+    margin: 10px 0;
+}
+
+.content form span.radio label{
+    float:none; width: auto;
+    margin: 10px 0;
+}
+
+/* Set the size of the div element that contains the map */
+#map {
+    height: 600px;
+    /* The height is 400 pixels */
+    width: 100%;
+    /* The width is the width of the web page */
+    margin-bottom: 20px;
+  }
+
+#infowindow-content .title {
+    font-weight: bold;
+}
+
+#infowindow-content {
+    display: none;
+}
+
+#map #infowindow-content {
+    display: inline;
+}
+
+.coverage {
+    width: 700px;
+}
+.coverage .row {
+    margin-bottom: 10px;
+    width: 100%;
+    float: left;
+}
+.coverage .row .color {
+    float: left;
+    width: 30px;
+    height: 30px;
+    margin: 12px 0 0 12px;
+}
+
+.coverage .row .input-control{
+ float: left;
+ margin-left: 15px;
+ position: relative;
+ margin-bottom: 10px;
+}
+
+
+.coverage .row .slot fieldset {
+    border: 1px solid;
+    padding: 3px 0 0 3px;
+    border-radius: 3px;
+}
+
+.coverage .row .slot .prefix {
+ position: absolute;
+ top: 26px;
+ left: 10px;
+}
+.coverage .row .slot .currency{
+    margin-left: 26px;
+}
+
+.coverage .row input{
+    line-height: 20px;
+    width: 200px;
+    border: none;
+}
+
+.coverage .function {
+    margin: 15px 0 0 15px;
+    float: left;
+}
+
+.coverage button {
+    padding: 10px;
+}
